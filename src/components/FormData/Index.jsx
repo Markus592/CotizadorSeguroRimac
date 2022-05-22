@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import "../FormData/Style.scss";
-import getUser from "../../../services/getUser";
+import getUser from "../../services/getUser";
 import DataContext from "../../context/DataContext";
 
 const Index = () => {
