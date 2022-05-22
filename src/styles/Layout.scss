@@ -1,0 +1,165 @@
+@import "./normalize.scss";
+@font-face {
+  font-family: "lato";
+  src: url("/src/fonts/lato-regular-webfont.woff2") format("woff2"),
+    url("/src/fonts/lato-regular-webfont.woff") format("woff"),
+    url("/src/fonts/lato-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+$primary-color: #ef3340;
+$color-gray: #494f66;
+$color-gray-2: #676f8f;
+$color-gray-3: #a3abcc;
+$color-gray-4: #c5cbe0;
+$color-gray-5: #f7f8fc;
+$color-gray-6: #e4e8f7;
+$color-acian: #6f7dff;
+$color-green: #7cc954;
+$color-white: white;
+span,
+p {
+  color: $color-gray-2;
+}
+* {
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+}
+.children {
+  // margin-top: 96px;
+}
+.errorForm {
+  color: $primary-color;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  background-color: $primary-color;
+  color: $color-white;
+  padding: 0.8rem 3rem;
+  border-radius: 5px;
+  border: 2px solid $primary-color;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: $color-white;
+  color: $primary-color;
+}
+.colorRed {
+  color: $primary-color;
+}
+.colorGray {
+  color: $color-gray;
+}
+.colorGray2 {
+  color: $color-gray-2;
+}
+.colorGray3 {
+  color: $color-gray-3;
+}
+.colorAcian {
+  color: $color-acian;
+}
+.gridPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: calc(110vh + 100px);
+}
+.mobile {
+  display: none;
+}
+.desktop {
+  display: block;
+}
+.gridArmaTuPlan {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin-top: 95px;
+  border-top: 1px solid $color-gray-6;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: $color-green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $color-green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+  .btn {
+    width: 100%;
+    padding: 0.8rem 1.8rem;
+  }
+  .mobile {
+    display: block !important;
+  }
+  .desktop {
+    display: none !important;
+  }
+  .gridPage {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gridArmaTuPlan {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+}

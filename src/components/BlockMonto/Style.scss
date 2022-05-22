@@ -1,0 +1,43 @@
+@import '../../styles/Layout.scss';
+.blockMonto{
+    padding: 2rem 0;
+    max-width: 15rem;
+    margin: 0 auto;
+    &__card{
+        border-bottom: 2px solid $color-gray-6;
+    }
+    &__mes{
+        font-size: .9rem;
+        margin: 0 0 .5rem;
+    }
+    &__Dinero{
+        margin: 0 0 .5rem;
+        font-weight: 700;
+        &.monto{
+            font-size:1.8rem
+        }
+    }
+    &__incluyeItem{
+        .iconCheck{
+            color: $color-green;
+            margin-right: 1rem;
+        }
+        color: $color-gray-2;
+        margin: 1rem 0;
+    }
+    @media (max-width:800px){
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        max-width: 100%;
+        margin: auto;
+        border-top: 2px solid $color-gray-6;
+        width: 100%;
+        padding: 1.2rem;
+        &__card{
+            
+            border-bottom: none;
+               
+        }
+    }
+}

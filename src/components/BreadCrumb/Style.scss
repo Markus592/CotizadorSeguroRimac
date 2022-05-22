@@ -1,0 +1,56 @@
+@import '../../styles/Layout.scss';
+.breadCrumb{
+    position: relative;
+    width: 100%;
+    color: $color-gray-3;
+    height: 100%;
+    &__card{
+        height: 100%;
+        background-color: $color-gray-5;
+        padding: 1rem;
+        position: absolute;
+        top: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .active{
+        color: $color-acian;
+    }
+    &__itemNumber{
+        &.active{
+            color: $color-acian;
+            border: 1px solid $color-acian;
+        }
+        padding: .5rem .8rem;
+        border: 1px solid $color-gray-3;
+        margin-right: 1rem;
+        border-radius: 50%;
+        color: $color-gray-3;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+    }
+    &__layer{
+        height: 30px;
+        width: 3px;
+        border: 2px dashed $color-gray-3;
+        margin-left: 1rem;
+    }
+    @media (max-width:800px) {
+        &__card{
+            position: relative;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            
+        }
+        &__layer2{
+            width:70%;
+            height: 4px;
+            background-color: $color-acian;
+            margin-left: 1rem;
+            border-radius: 20px;
+        }
+        &__item{}
+    }
+}

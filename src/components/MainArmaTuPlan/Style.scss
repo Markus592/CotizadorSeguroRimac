@@ -1,0 +1,18 @@
+@import '../../styles/Layout.scss';
+.MainArmaTuPlan{
+    padding: 2rem;
+    .volver{
+        color: $color-gray-3;
+        &__icon{
+            color: $primary-color;
+            margin-right: .5rem;
+            border: 2px solid $primary-color;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            font-weight: bold;
+        }
+    }
+}

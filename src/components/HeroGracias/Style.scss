@@ -1,0 +1,18 @@
+@import "../../styles/Layout.scss";
+.heroGracias{
+    height: 100%;
+    &__card{
+        height: 100%;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top right;
+    }
+    @media (max-width: 800px) {
+        height: 225px;
+        
+    }
+    
+}

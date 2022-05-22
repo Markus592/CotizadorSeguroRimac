@@ -1,0 +1,99 @@
+@import "../../styles/Layout.scss";
+.TabCoberturas {
+  &__title {
+    margin: 3rem 0;
+  }
+  &__tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-transform: uppercase;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  &__tabItem {
+    padding: 0.7rem 0;
+    cursor: pointer;
+    &.active {
+      color: $primary-color;
+      border-bottom: 2px solid $primary-color;
+    }
+  }
+  &__BodyItem {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__Body {
+    .accordion__button {
+      display: flex;
+      background-color: white;
+      align-items: center;
+      color: red;
+      &:hover {
+        background-color: $color-gray-5;
+      }
+    }
+    .flexItemTab {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2rem;
+    }
+    .addItemTab {
+      display: flex;
+      gap: 1rem;
+      cursor: pointer;
+      color: $color-acian;
+      text-transform: uppercase;
+      margin-left: calc(55px + 4rem);
+      padding: 0 0 1rem;
+      .actionTab {
+        color: $color-acian;
+        border: 1px solid $color-acian;
+        border-radius: 50%;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .itemPanelBody {
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 800px) {
+    &__tabItem {
+      font-size: 0.9rem;
+    }
+    &__BodyItem {
+    }
+    .mobile {
+      .itemTab {
+        border-bottom: 1px solid $color-gray-6;
+        &__more {
+          margin-left: calc(65px);
+          padding-bottom: 1rem;
+          display: inline-block;
+          &.active{
+              color: $color-gray-3;
+          }
+        }
+      }
+      .itemPanelBody {
+        display: none;
+        &.active{
+            display: block;
+        }
+      }
+      .flexItemTab {
+        & > div {
+          display: flex;
+          gap: 1rem;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+    }
+  }
+}

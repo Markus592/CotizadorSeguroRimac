@@ -1,0 +1,32 @@
+@import "../../styles/Layout.scss";
+.cardUser {
+  &__saludo {
+    margin-top: 2rem;
+    font-size: 2rem;
+    &.mobile{
+        margin-top: 0;
+    }
+  }
+  &__DatosCard {
+    margin: 2rem 0;
+    border: 1px solid $color-gray-6;
+    border-radius: 1.2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__Marca{
+      font-weight: bold;
+      font-size: 1.5rem;
+  }
+  &__img{
+      width: 150px;
+  }
+
+  @media(max-width:800px){
+    &__img{
+        width: 50%;
+    }
+  }
+}

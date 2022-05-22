@@ -1,0 +1,55 @@
+@import "../../styles/Layout.scss";
+.formData {
+  padding:2rem;
+  max-width: 30rem;
+  margin: 0 auto;
+  &__card {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .form {
+    .tpDocumentCard {
+      margin-bottom: 1rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+
+      #nroDoc {
+        margin-bottom: 0;
+        border-left: none;
+      }
+    }
+    #tp_Document {
+      padding: 1rem;
+      border: 1px solid $color-gray-4;
+    }
+  
+    &__input {
+      margin-bottom: 1rem;
+      display: block;
+      padding: 1rem;
+      border: 1px solid $color-gray-4;
+      width: 100%;
+      box-sizing: border-box;
+      &::-webkit-input-placeholder {
+        color: $color-gray-4;
+      }
+    }
+    .politicaCard {
+      display: flex;
+      align-items: baseline;
+      color: $color-gray-2;
+      gap: 1rem;
+
+      a {
+        color: $color-gray;
+        font-weight: 700;
+      }
+    }
+  }
+  @media (max-width:800px) {
+    // padding: 0 2rem;
+  }
+}

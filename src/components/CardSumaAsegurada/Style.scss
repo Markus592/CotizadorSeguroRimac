@@ -1,0 +1,34 @@
+@import '../../styles/Layout.scss';
+.cardSumaAsegurada{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid $color-gray-6;
+    padding-bottom: 2rem;
+    &__rangeFlex{
+        display: flex;
+        gap: 1rem;
+    }
+    &__Operacion{
+        display: flex;
+        gap: 1rem;
+        padding: .8rem 1.2rem;
+        border: 2px solid $color-gray-4;
+        border-radius: 10px;
+        align-items: center;
+    }
+    &__OperacionAction{
+        font-weight: bold;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    @media (max-width:800px){
+        flex-direction: column;
+        align-items: baseline;
+        &__Operacion{
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}

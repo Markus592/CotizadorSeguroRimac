@@ -1,0 +1,42 @@
+@import "../../styles/layout.scss";
+.navBar {
+  padding: 2rem 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  .headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    &__logo {
+      width: 200px;
+    }
+  }
+  .navMenu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    &__img {
+      width: 20px;
+    }
+    &__contact {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    &__phone {
+      color: $color-acian;
+    }
+  }
+  @media (max-width: 800px) {
+    padding: 1rem 0;
+    position: relative;
+    .headerWrapper {
+      &__logo {
+        width: 30%;
+      }
+    }
+  }
+}
